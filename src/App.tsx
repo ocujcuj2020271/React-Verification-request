@@ -1,6 +1,7 @@
 import Login from './components/Auth/login';
 import Informacion from './components/Home/home'
 import Error404 from './components/Errors/error404';
+import Navigation from './components/Navigation/Navigation';
 import {
   Routes,
   Route,
@@ -97,6 +98,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Navigation/>
       <Routes>
         <Route path="/" element={<Login user={user} setUser={setUser} />} />
         <Route path="/i" element={<Informacion/>}/>
